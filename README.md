@@ -52,8 +52,32 @@
         self.performSegue(withIdentifier: "ManualSegue", sender: self)
     }
  ```
+ * UIStoryboardSegue 클래스를 서브클래싱항 새로운 가능을 갖춘 세그웨이 객체정의 -> CustomSegue
+ Storyboard 에서 StoryboardSegue 탭에 class 를 새로 정의한 클래스로 설정
+    - custom segue 정의
+  ```swift
+import UIKit
+
+class NewSegue: UIStoryboardSegue{
+    
+    override func perform() {
+        //세그웨이의 출발지 뷰 컨트롤러
+        let srcUVC = self.source
+        
+        //세그웨이의 목적지 뷰 컨트롤러
+        let destUVC = self.destination
+        
+        //fromView 에서 toView 로 뷰를 전환한다
+        UIView.transition(from: srcUVC.view,
+                          to: destUVC.view,
+                          duration: 2,
+                          options: .transitionCurlDown,
+                          completion: nil)
+    }
+}
+  ```
 3_2. 뒤로이동
-* Storyboard 에서 상단의 Exit 아이콘과 연결(Action Segue, Manual Segue)
+* Storyboard 에서 상단의 Exit 아이콘과 연결(Action Segue, Manual Segue, Custom Segue)
 ```swift
     @IBAction func goBackSegue(_ sender: UIStoryboardSegue){
     }
