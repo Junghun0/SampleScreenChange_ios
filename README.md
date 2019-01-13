@@ -82,5 +82,20 @@ class NewSegue: UIStoryboardSegue{
     @IBAction func goBackSegue(_ sender: UIStoryboardSegue){
     }
 ```
+3_3. Segue 전처리 메소드
+Segue 실행하기 전에 값을 저장해둘 필요가 있거나, 경고창을 띄워주는 등의 처리를 해야 할 경우 전처리 메소드 사용 - Segue 실행되기 전에 자동으로 실행됨
+```swift
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ActionSegue"){
+            NSLog("action segue 실행!")
+        }else if(segue.identifier == "ManualSegue"){
+            NSLog("Manual segue 실행!")
+        }else if(segue.identifier == "CustomSegue"){
+            NSLog("Custom segue 실행!")
+        }else{
+            NSLog("알수없는 segue 입니다.")
+        }
+    }
+```
 
     
