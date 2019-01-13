@@ -53,7 +53,7 @@
     }
  ```
  * UIStoryboardSegue 클래스를 서브클래싱항 새로운 가능을 갖춘 세그웨이 객체정의 -> CustomSegue
- Storyboard 에서 StoryboardSegue 탭에 class 를 새로 정의한 클래스로 설정
+ Storyboard 에서 segue 클릭 후 StoryboardSegue 탭에 class 를 새로 정의한 클래스로 설정
     - custom segue 정의
   ```swift
 import UIKit
