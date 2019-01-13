@@ -47,9 +47,13 @@
 3_1. 화면이동
  * Storyboard 에서 다른 ViewController 와 연결 -> Action Segue
  * 출발점이 뷰 컨트롤러 자체인 경우 -> Manual Segue
-
+ ```swift
+     @IBAction func manualSegueBtn(_ sender: Any) {
+        self.performSegue(withIdentifier: "ManualSegue", sender: self)
+    }
+ ```
 3_2. 뒤로이동
-* Storyboard 에서 상단의 Exit 아이콘과 연결(Action Segue)
+* Storyboard 에서 상단의 Exit 아이콘과 연결(Action Segue, Manual Segue)
 ```swift
     @IBAction func goBackSegue(_ sender: UIStoryboardSegue){
     }
