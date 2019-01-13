@@ -30,7 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Segue Go Second Button"/>
                                 <connections>
-                                    <segue destination="TGe-nv-p8C" kind="presentation" id="Ntf-vd-6K1"/>
+                                    <segue destination="TGe-nv-p8C" kind="presentation" identifier="ActionSegue" id="Ntf-vd-6K1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koH-9w-Q4M">
@@ -56,6 +56,14 @@
                                 <connections>
                                     <action selector="manualSegueBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vbf-W7-ob1"/>
                                     <segue destination="0XV-57-s2m" kind="show" identifier="ManualSegue" id="JTq-Yk-PVV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYc-xK-YuM">
+                                <rect key="frame" x="137" y="421" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Custom Segue"/>
+                                <connections>
+                                    <segue destination="sdj-LH-hnw" kind="custom" identifier="CustomSegue" customClass="NewSegue" customModule="SampleScreenChange" customModuleProvider="target" id="qzk-p6-oso"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -148,6 +156,40 @@
             </objects>
             <point key="canvasLocation" x="823" y="-34"/>
         </scene>
+        <!--Custom Segue View Controller-->
+        <scene sceneID="4ZZ-NK-zqx">
+            <objects>
+                <viewController id="sdj-LH-hnw" customClass="CustomSegueViewController" customModule="SampleScreenChange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nRb-bT-vEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4d-cA-MrJ">
+                                <rect key="frame" x="150" y="165" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go to Main"/>
+                                <connections>
+                                    <action selector="customSegueBackbtn:" destination="sdj-LH-hnw" eventType="touchUpInside" id="Wgx-Fx-9b0"/>
+                                    <segue destination="cqK-hp-sGc" kind="unwind" identifier="UnwindSegue" unwindAction="goBackSegue:" id="ieT-2F-Onk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Custom Segue View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12R-qR-oqU">
+                                <rect key="frame" x="16" y="84" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tx7-iO-aP9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8RI-Ew-LZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cqK-hp-sGc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1884" y="-331"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="xWy-wL-dES">
             <objects>
@@ -167,6 +209,9 @@
                                 <rect key="frame" x="86" y="176" width="202" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go to Main"/>
+                                <connections>
+                                    <segue destination="BlC-rB-WNL" kind="unwind" unwindAction="goBackSegue:" id="EW3-Za-pR7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -174,8 +219,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTT-6T-wEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="BlC-rB-WNL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1533.5999999999999" y="-178.56071964017991"/>
+            <point key="canvasLocation" x="822" y="-716"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vWq-8c-b7c">

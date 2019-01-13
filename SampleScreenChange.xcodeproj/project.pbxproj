@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		344A65E821EB25E0000B253D /* NavigationSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A65E721EB25E0000B253D /* NavigationSecondView.swift */; };
+		344A65EA21EB407C000B253D /* NewSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A65E921EB407C000B253D /* NewSegue.swift */; };
+		344A65EC21EB414A000B253D /* CustomSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A65EB21EB414A000B253D /* CustomSegueViewController.swift */; };
 		34DBBDB421EB1292004DD32A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DBBDB321EB1292004DD32A /* AppDelegate.swift */; };
 		34DBBDB621EB1292004DD32A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DBBDB521EB1292004DD32A /* ViewController.swift */; };
 		34DBBDB921EB1292004DD32A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DBBDB721EB1292004DD32A /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		344A65E721EB25E0000B253D /* NavigationSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSecondView.swift; sourceTree = "<group>"; };
+		344A65E921EB407C000B253D /* NewSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSegue.swift; sourceTree = "<group>"; };
+		344A65EB21EB414A000B253D /* CustomSegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueViewController.swift; sourceTree = "<group>"; };
 		34DBBDB021EB1292004DD32A /* SampleScreenChange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleScreenChange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DBBDB321EB1292004DD32A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34DBBDB521EB1292004DD32A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				34DBBDC521EB12C2004DD32A /* SecondViewController.swift */,
 				34DBBDC721EB226D004DD32A /* NavigationFirstView.swift */,
 				344A65E721EB25E0000B253D /* NavigationSecondView.swift */,
+				344A65E921EB407C000B253D /* NewSegue.swift */,
+				344A65EB21EB414A000B253D /* CustomSegueViewController.swift */,
 			);
 			path = SampleScreenChange;
 			sourceTree = "<group>";
@@ -144,10 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				344A65EA21EB407C000B253D /* NewSegue.swift in Sources */,
 				34DBBDC621EB12C2004DD32A /* SecondViewController.swift in Sources */,
 				34DBBDB621EB1292004DD32A /* ViewController.swift in Sources */,
 				34DBBDB421EB1292004DD32A /* AppDelegate.swift in Sources */,
 				34DBBDC821EB226D004DD32A /* NavigationFirstView.swift in Sources */,
+				344A65EC21EB414A000B253D /* CustomSegueViewController.swift in Sources */,
 				344A65E821EB25E0000B253D /* NavigationSecondView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
